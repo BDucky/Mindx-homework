@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 
 const ProductDetails = ({ item, onSelect }) => {
     const params = useParams()
-    const { id } = params
+    const { productId } = params
 
     const handleShowProduct = () => {
         onSelect()
