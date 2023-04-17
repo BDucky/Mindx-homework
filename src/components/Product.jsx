@@ -9,9 +9,9 @@ export default function Product({ item, onDelete, OnUpdate, onSelect }) {
       onSelect(id)
    }
    return (
-      <div className="product" onClick={() => handleSelectProduct(item.id)}>
-         <img src={item?.thumbnail} alt={item.title} />
-         <div className="info">
+      <div className="product" >
+         <img src={item?.thumbnail} alt={item.title} onClick={() => handleSelectProduct(item.id)} />
+         <div className="info" onClick={() => handleSelectProduct(item.id)}>
             <div className="title" title={item.description}>{item.title}</div>
             <div className="prices">
                <del className="price-root">
@@ -23,11 +23,12 @@ export default function Product({ item, onDelete, OnUpdate, onSelect }) {
                   }
                </span>
             </div>
-            <div className="options">
-               <button className="btn delete" onClick={() => handleRemoveProduct(item.id)}>
-                  Remove product
-               </button>
-            </div>
+
+         </div>
+         <div className="options">
+            <button className="btn delete" onClick={() => handleRemoveProduct(item.id)}>
+               Remove product
+            </button>
          </div>
       </div>
    )
