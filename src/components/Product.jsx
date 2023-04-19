@@ -23,7 +23,6 @@ export default function Product({ item, onDelete, OnUpdate, onSelect }) {
                   }
                </span>
             </div>
-
          </div>
          <div className="options">
             <button className="btn delete" onClick={() => handleRemoveProduct(item.id)}>
